@@ -1,0 +1,9 @@
+.ManagementContainer{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    height: 85vh;
+    border-radius: 15px;
+    overflow-y: auto;
+
+}

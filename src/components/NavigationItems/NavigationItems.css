@@ -1,0 +1,39 @@
+.NavLinks{
+    display: flex;
+    flex-direction: column;
+    margin: 4px 6px;
+    text-decoration: none;
+}
+img{
+    padding-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(155, 149, 149);
+    font-size: 15px;
+}
+
+.NavLinks p{
+    list-style: none;
+display: flex;
+/* background-color: rgb(242, 246, 247); */
+padding: 10px 16px;
+margin: 1px;
+
+}
+
+p .link-item {
+align-items: center;
+
+}
+.b:hover {
+    fill:rgb(66, 66, 211);
+}
+.a:hover{
+    fill:rgb(66, 66, 211);
+}
+
+
+
+
+

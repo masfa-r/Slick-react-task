@@ -1,0 +1,86 @@
+
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: auto;
+  }
+  .productImage{
+    width: 100px;
+    height: 75px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 5px 5px;
+    text-align: center;
+    color: darkgray;
+    
+  }
+  
+  th {
+    background-color: #F5F6FA;
+    color: #6F8AE8;
+   text-transform: uppercase;
+
+  }
+  td{
+      padding-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .del-edit{
+      text-align: end;
+  }
+  td:first-child{
+    text-align: start;
+    width: 60px;
+
+  }
+  td:first-child img{
+      padding-right: 0;
+  }
+  table .price-col{
+      display: flex;
+      margin: 20px;
+      justify-content: center;
+      align-items: center;
+  }
+
+.modal{
+  width: 50%;
+  margin: auto;
+}
+label{
+  text-transform: uppercase;
+  color: #6F8AE8;
+  font-weight: bold;
+}
+
+  input[type=text],input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #F5F6FA;
+    background-color: #F5F6FA;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    
+  }
+
+  
+  input[type=submit] {
+    width: 30%;
+    background-color: #6F8AE8;
+    color: white;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  

@@ -1,0 +1,34 @@
+.ManageBanners{
+    margin: auto;
+    padding: 0;
+    width: 95%;
+    height: 400px;
+    /* background-color: hotpink; */
+}
+.BannersListCollection{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.BannerLinks{
+    width: 78%;
+    list-style: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    align-items: center;
+    color: darkgray;
+    background-color: #f5f6fa;
+}
+.BannerImage img{
+    width: 122px;
+height: 73px;
+}
+.BannerLinks img{
+    padding-right: 5px;
+}
+.BannerBtn img{
+  padding-right: 8px;
+}

@@ -1,0 +1,14 @@
+.Button {
+    background-color: rgb(79, 111, 216);
+    display: inline;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: 15px;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+}

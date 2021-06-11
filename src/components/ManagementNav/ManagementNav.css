@@ -1,0 +1,13 @@
+.managementNavLinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 35px;
+}
+.mLinks{
+    margin-right: 28px;
+    font-weight: bold;
+}
+
+.AddBtn .Button{
+    padding: 10px 15px;
+}
