@@ -9,7 +9,7 @@ const Modal = (props) => {
     const [productData, setProductData] = useState({
         image: "",
         category: "",
-        name: '',
+        name: "",
         price: 0
     });
 
@@ -18,7 +18,6 @@ const Modal = (props) => {
         axios.post('https://internship-slick-api.herokuapp.com/api/products',productData)
         .then(res => {
             console.log(res);
-            
         });
         props.toggle();
         

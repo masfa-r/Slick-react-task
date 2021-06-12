@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import './ManageBanners.css';
@@ -9,20 +9,25 @@ import axios from 'axios'
 
 const ManageBanners = (props) => {
   const { id } = useParams();
-  const [allBanners, setAllBanners] = useState([]);
+  
 
   useEffect(async () => {
     console.log('ok')
     await axios.get('https://internship-slick-api.herokuapp.com/api/banners').then(({ data }) => {
       console.log(data.data)
-      setAllBanners(data.data);
+      props.setAllBanners(data.data);
+      
 
     });
   }, []);
 
   const deletePostHandler = (id) => {
     axios.delete('https://internship-slick-api.herokuapp.com/api/banners?id=' + id).then(res =>{
-        console.log(res);
+
+      axios.get('https://internship-slick-api.herokuapp.com/api/banners').then(({ data }) => {
+        console.log(data.data)
+        props.setAllBanners(data.data);})
+        console.log(res);   
         alert('Banner deleted.');
     });
 
@@ -31,7 +36,7 @@ const ManageBanners = (props) => {
   return (
     <div className="ManageBanners">
       {
-        allBanners.map((banner) => {
+        props.allBanners.map((banner) => {
           return (<div className="BannersListCollection" key={banner._id}>
             <div className="BannerImage">
               <img src={banner.link} alt="" />

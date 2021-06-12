@@ -8,15 +8,17 @@ const ModalBanner = (props) => {
     const [bannerData, setBannerData] = useState({
         link: ""
     });
-
     const postBannerDataHandler = (e) => {
-        
-        axios.post('https://internship-slick-api.herokuapp.com/api/banners',bannerData)
-        .then(res => {
-            console.log(res);
-            
-        });
-        props.toggle();
+
+        axios.post('https://internship-slick-api.herokuapp.com/api/banners', bannerData)
+            .then(res => {
+                axios.get('https://internship-slick-api.herokuapp.com/api/banners').then(({ data }) => {
+                    console.log(data.data)
+                    props.setAllBanners(data.data);
+
+                });
+                props.toggle();
+            })
 
     }
     return (
@@ -33,7 +35,7 @@ const ModalBanner = (props) => {
                         onChange={props.handleChange}
                         placeholder="Write here..."
                         value={bannerData.link} onChange={(e) => { setBannerData({ ...bannerData, link: e.target.value }) }}
-                        ></input>
+                    ></input>
 
                 </form>
                 <Button onclick={postBannerDataHandler}>Save</Button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ManageProducts.css';
 import PriceIcon from '../../assets/priceIcon.png';
@@ -6,24 +6,26 @@ import DeleteIcon from '../../assets/deleteIcon.png';
 import EditIcon from '../../assets/editIcon.png';
 import axios from 'axios';
 
-const ManageProducts = () => {
+const ManageProducts = (props) => {
     const { id } = useParams();
-    const [allProducts, setAllProducts] = useState([]);
-
+    
     useEffect(async () => {
         console.log('ok')
         await axios.get('https://internship-slick-api.herokuapp.com/api/products').then(({ data }) => {
             console.log(data.data)
-            setAllProducts(data.data);
+            props.setAllProducts(data.data);
         });
     }, []);
 
     const deletePostHandler = (id) => {
         axios.delete('https://internship-slick-api.herokuapp.com/api/products?id=' + id).then(res => {
+            axios.get('https://internship-slick-api.herokuapp.com/api/products').then(({ data }) => {
+                console.log(data.data)
+                props.setAllProducts(data.data);
+            });
             console.log(res);
             alert('Product deleted.');
         });
-
     }
 
     return (
@@ -37,8 +39,7 @@ const ManageProducts = () => {
                     <th></th>
                 </tr>
                 {
-
-                    allProducts.map((product) => {
+                    props.allProducts.map((product) => {
                         return (
                             <tr key={product._id}>
                                 <td>

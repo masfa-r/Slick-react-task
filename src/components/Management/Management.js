@@ -6,15 +6,15 @@ import './Management.css';
 import axios from 'axios';
 import ManagementContainer from './ManagementContainer/ManagementContainer';
 
-
 const Management = () => {
 
+    const [allBanners, setAllBanners] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
     const [allCategories, setAllCategories] = useState([]);
 
     useEffect(async () => {
         console.log('ok')
         await axios.get('https://internship-slick-api.herokuapp.com/api/products/categories').then(({ data }) => {
-            console.log(data.data)
             setAllCategories(data.data);
 
         });
@@ -46,12 +46,21 @@ const Management = () => {
     return (
         <div className="Management">
             <TopTitleBar pagetitle="Management" />
-            <ManagementContainer addItemModal={toggle}  inputVal={inputVal} imageURL={imageURL} setImageURL = {setImageURL} />
+            <ManagementContainer addItemModal={toggle}  inputVal={inputVal} imageURL={imageURL} setImageURL = {setImageURL}
+            allBanners ={allBanners} setAllBanners ={setAllBanners}
+            allProducts ={allProducts} setAllProducts={setAllProducts}
+             />
+
+
             {modal ? modalType ==="banner"?<ModalBanner toggle={toggle} imageURL ={imageURL} setImageURL = {setImageURL}
             inputVal = {inputVal}  setInputVal = {setInputVal}
             handleChange ={handleChange} onBannerSave = {onBannerSave}
-            />:<ModalProducts allCategories={allCategories}
+            allBanners ={allBanners} setAllBanners ={setAllBanners}
+            />:
+            <ModalProducts allCategories={allCategories}
             toggle={toggle}
+            allProducts ={allProducts} setAllProducts={setAllProducts}
+           
             // modal={modal}
             /> :null}
             
