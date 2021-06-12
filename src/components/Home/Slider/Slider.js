@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import './Slider.css';
 // import Carousel from 'react-bootstrap/Carousel';
-import pic1 from '../../assets/sliderimage.png';
+import pic1 from '../../../assets/sliderimage.png';
 
 
 const Slider = () => {
@@ -29,7 +29,7 @@ setInterval(function () {
                   <img src={pic1} alt="" />
               </div>
               <div className="slide">
-                  <img src={pic1} alt="" />
+                  <img src="https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
               </div>
               <div className="slide">
                   <img src={pic1} alt="" />

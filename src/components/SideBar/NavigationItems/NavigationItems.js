@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
 import './NavigationItems.css';
-import { ReactComponent as ManagementIcon} from '../../assets/management.svg';
-import { ReactComponent as AnalyticsIcon} from '../../assets/analytics.svg';
-import { ReactComponent as ProductIcon} from '../../assets/product.svg';
-import { ReactComponent as HomeIcon} from '../../assets/home.svg';
+import { ReactComponent as ManagementIcon} from '../../../assets/management.svg';
+import { ReactComponent as AnalyticsIcon} from '../../../assets/analytics.svg';
+import { ReactComponent as ProductIcon} from '../../../assets/product.svg';
+import { ReactComponent as HomeIcon} from '../../../assets/home.svg';
 
 const NavigationItems = () => {
     const navLinks = [
@@ -16,13 +16,13 @@ const NavigationItems = () => {
         },
         {
             className: 'NavLinks',
-            to: '/',
+            to: '',
             name: 'Analytics',
             iconComponent: <AnalyticsIcon/>
         },
         {
             className: 'NavLinks',
-            to: '/',
+            to: '',
             name: 'Products',
             iconComponent: <ProductIcon/> 
         },
@@ -38,9 +38,9 @@ const NavigationItems = () => {
         <div className="NavLinks">  
             {
             navLinks.map(link => 
-            <p>
-            {link.iconComponent} 
-            <NavLink className={link.className} to={link.to}>{link.name}</NavLink>
+            <p key={link.name}>
+               {link.iconComponent}
+            <NavLink className={link.className}  to={link.to}> {link.name}</NavLink>
             </p>
             )        
             }

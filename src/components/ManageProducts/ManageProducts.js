@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ManageProducts.css';
 import PriceIcon from '../../assets/priceIcon.png';
@@ -15,9 +15,16 @@ const ManageProducts = () => {
         await axios.get('https://internship-slick-api.herokuapp.com/api/products').then(({ data }) => {
             console.log(data.data)
             setAllProducts(data.data);
-
         });
     }, []);
+
+    const deletePostHandler = (id) => {
+        axios.delete('https://internship-slick-api.herokuapp.com/api/products?id=' + id).then(res => {
+            console.log(res);
+            alert('Product deleted.');
+        });
+
+    }
 
     return (
         <div className="ManageProducts">
@@ -31,9 +38,9 @@ const ManageProducts = () => {
                 </tr>
                 {
 
-                allProducts.map((product) => {
+                    allProducts.map((product) => {
                         return (
-                            <tr>
+                            <tr key={product._id}>
                                 <td>
                                     <img className="productImage" src={product.image} alt=""></img>
                                 </td>
@@ -47,11 +54,11 @@ const ManageProducts = () => {
                                 </td>
                                 <td className="del-edit">
                                     <img src={EditIcon} alt="" />
-                                    <img src={DeleteIcon} alt="" />
+                                    <img src={DeleteIcon} onClick={() => deletePostHandler(product._id)} alt="" />
                                 </td>
                             </tr>
-                 );
-            })
+                        );
+                    })
                 }
 
             </table>

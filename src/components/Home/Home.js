@@ -1,8 +1,8 @@
-import Slider  from '../Slider/Slider';
+import Slider  from './Slider/Slider';
 import React from 'react';
 import TopTitleBar from '../TopTitleBar/TopTitleBar';
-import ProductTitle from '../ProductTitle/ProductTitle';
-import ListedProducts from '../ListedProducts/ListedProducts';
+import ProductTitle from './ProductTitle/ProductTitle';
+import ListedProducts from './ListedProducts/ListedProducts';
 
 const Home = () => {
     return(

@@ -8,6 +8,7 @@ table {
   .productImage{
     width: 100px;
     height: 75px;
+    border-radius: 5px;
   }
   
   th, td {
@@ -83,4 +84,10 @@ label{
     
   }
   
+  @media screen and (max-width: 780px){
+    th {
+     font-size: 14px;
+    }
+
+  }
   

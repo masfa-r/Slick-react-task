@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import './Modal.css';
 import Button from '../Button/Button';
+import axios from 'axios';
 
 const ModalBanner = (props) => {
 
+    const [bannerData, setBannerData] = useState({
+        link: ""
+    });
+
+    const postBannerDataHandler = (e) => {
+        
+        axios.post('https://internship-slick-api.herokuapp.com/api/banners',bannerData)
+        .then(res => {
+            console.log(res);
+            
+        });
+        props.toggle();
+
+    }
     return (
         <div className="Modal">
             <div className="modal-content" >
@@ -16,10 +31,12 @@ const ModalBanner = (props) => {
                     <input type="text" id="imageURL" name="bannerImageURL"
                         value={props.inputVal}
                         onChange={props.handleChange}
-                        placeholder="Write here..."></input>
+                        placeholder="Write here..."
+                        value={bannerData.link} onChange={(e) => { setBannerData({ ...bannerData, link: e.target.value }) }}
+                        ></input>
 
                 </form>
-                <Button onclick={props.onBannerSave}>Save</Button>
+                <Button onclick={postBannerDataHandler}>Save</Button>
 
             </div>
         </div>

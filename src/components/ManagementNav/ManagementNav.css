@@ -7,7 +7,21 @@
     margin-right: 28px;
     font-weight: bold;
 }
-
 .AddBtn .Button{
     padding: 10px 15px;
+}
+@media screen and (max-width: 780px){
+    .managementNavLinks{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .managementLinks{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    .mLinks{
+        margin-right: 2px;
+       
+    }
 }

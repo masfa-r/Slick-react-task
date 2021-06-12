@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../UI/Modal/Modal';
-import ManageBanners from '../ManageBanners/ManageBanners';
+import ModalProducts from '../../UI/Modal/ModalProducts';
 import TopTitleBar from '../TopTitleBar/TopTitleBar';
 import ModalBanner from '../../UI/Modal/ModalBanner'
 import './Management.css';
@@ -51,7 +50,7 @@ const Management = () => {
             {modal ? modalType ==="banner"?<ModalBanner toggle={toggle} imageURL ={imageURL} setImageURL = {setImageURL}
             inputVal = {inputVal}  setInputVal = {setInputVal}
             handleChange ={handleChange} onBannerSave = {onBannerSave}
-            />:<Modal allCategories={allCategories}
+            />:<ModalProducts allCategories={allCategories}
             toggle={toggle}
             // modal={modal}
             /> :null}

@@ -7,3 +7,10 @@
     overflow-y: auto;
 
 }
+
+@media screen and (max-width: 780px){
+    .ManagementContainer{
+        margin-bottom: 95px;
+        padding: 5px;
+    }
+}

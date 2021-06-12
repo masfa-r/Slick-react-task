@@ -1,6 +1,6 @@
 import React from 'react';
 import './PriceTag.css';
-import PriceIcon from '../../../assets/priceIcon.png';
+import PriceIcon from '../../../../assets/priceIcon.png';
 
 
 const PriceTag = (props) => {

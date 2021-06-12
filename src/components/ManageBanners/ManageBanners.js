@@ -20,11 +20,19 @@ const ManageBanners = (props) => {
     });
   }, []);
 
+  const deletePostHandler = (id) => {
+    axios.delete('https://internship-slick-api.herokuapp.com/api/banners?id=' + id).then(res =>{
+        console.log(res);
+        alert('Banner deleted.');
+    });
+
+}
+
   return (
     <div className="ManageBanners">
       {
         allBanners.map((banner) => {
-          return (<div className="BannersListCollection">
+          return (<div className="BannersListCollection" key={banner._id}>
             <div className="BannerImage">
               <img src={banner.link} alt="" />
             </div>
@@ -35,7 +43,7 @@ const ManageBanners = (props) => {
 
             <div className="BannerBtn">
               <img src={EditIcon} alt="" />
-              <img src={DeleteIcon} alt="" />
+              <img src={DeleteIcon} onClick={() => deletePostHandler(banner._id)} alt="" />
             </div>
 
           </div>)

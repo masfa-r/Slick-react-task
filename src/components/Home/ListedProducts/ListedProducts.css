@@ -1,0 +1,16 @@
+.ListedProductsContainer{
+    display: flex;
+    padding: 0px 48px;
+    padding-right: 0;
+    flex-wrap: wrap;
+    width: 93%;
+    margin: auto;
+}
+@media screen and (max-width: 780px){
+    .ListedProductsContainer{
+        padding: 15px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+}

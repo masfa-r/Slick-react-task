@@ -1,8 +1,0 @@
-.ListedProductsContainer{
-    display: flex;
-    padding: 0px 48px;
-    padding-right: 0;
-    flex-wrap: wrap;
-    width: 93%;
-    margin: auto;
-}

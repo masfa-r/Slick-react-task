@@ -21,14 +21,57 @@
     align-items: center;
     color: darkgray;
     background-color: #f5f6fa;
+    overflow: auto;
+    white-space: wrap;
+}
+.BannerImage{
+    border-radius: 5px;
+    margin-right: 3px;
 }
 .BannerImage img{
     width: 122px;
 height: 73px;
+padding-right: 0px;
+border-radius: 5px;
 }
 .BannerLinks img{
     padding-right: 5px;
 }
 .BannerBtn img{
   padding-right: 8px;
+}
+
+
+@media screen and (max-width: 780px){
+    .ManageBanners{
+        width: 95%;
+    }
+    .BannersListCollection{
+        flex-direction: column;
+    }
+    .BannerImage img{
+        width: 100%;
+        margin: auto;
+        height: 200px;
+        padding-right: 0;
+    }
+    .BannerLinks{
+        width: 95%;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        align-items: center;
+        overflow: auto;
+        white-space: wrap;
+    }
+    .BannerLinks li {
+        display: flex;
+    }
+    .BannerLinks li img{
+        height: 20px;
+    }
+    .BannerBtn img{
+        width: 35px;
+        height: 35px;
+    }
 }

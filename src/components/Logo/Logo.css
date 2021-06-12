@@ -3,5 +3,22 @@
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 780px){
+.Logo-container{
+    display: block;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    left: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: white;
+  }
+  .Logo-container img{
+   width: 95px;
+   height: 35px;
+  }
 }

@@ -1,0 +1,16 @@
+.ProductTitle{
+    margin: 5px;
+     padding: 5px 68px;;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 580px){
+    .ProductTitle{
+        padding: 5px 15px;
+    }
+    .ProductTitle h3{
+        margin: 0px;
+        padding-bottom: 0;
+        margin-top: 10px;
+    }
+}

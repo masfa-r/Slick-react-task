@@ -18,7 +18,7 @@ const ManagementNav = (props) => {
     ]
     return (
         <div className="managementNavLinks" >
-            <div>
+            <div className="managementLinks">
                 {
                     managementNavLinks.map(link =>
                         <NavLink className={link.className} to={link.to}>{link.name}</NavLink>

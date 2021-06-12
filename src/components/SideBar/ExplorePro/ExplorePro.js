@@ -1,8 +1,8 @@
 import React from 'react';
 import './ExplorePro.css';
-import Button from '../../UI/Button/Button';
-import PolygonSmall from '../../assets/PolygonS.png';
-import PolygonLarge from '../../assets/PolygonL.png';
+import Button from '../../../UI/Button/Button';
+import PolygonSmall from '../../../assets/PolygonS.png';
+import PolygonLarge from '../../../assets/PolygonL.png';
 
 const ExplorePro = () => {
     return (
