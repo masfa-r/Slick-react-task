@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="right-container">
        <Switch>
-         <Route exact path = "/" >
+         <Route exact path = "/Slick-react-task/" >
            <Home/>
          </Route>
          <Route path = "/management/1" >
