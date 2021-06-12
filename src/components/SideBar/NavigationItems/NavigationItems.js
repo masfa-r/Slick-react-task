@@ -10,7 +10,7 @@ const NavigationItems = () => {
     const navLinks = [
         {
             className: 'NavLinks',
-            to: '/',
+            to: '/Slick-react-task/',
             name: 'Home',
             iconComponent: <HomeIcon/>
         },
