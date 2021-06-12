@@ -23,8 +23,7 @@ const ManageProducts = (props) => {
                 console.log(data.data)
                 props.setAllProducts(data.data);
             });
-            console.log(res);
-            alert('Product deleted.');
+              alert('Product deleted.');
         });
     }
 

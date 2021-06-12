@@ -13,14 +13,22 @@ const Modal = (props) => {
         price: 0
     });
 
+    // const postDataHandler = (e) => {
+        
+    //     axios.post('https://internship-slick-api.herokuapp.com/api/products',productData)
+    //     .then(res => {
+    //         console.log(res);
+    //     });
+    //     props.toggle();
+        
+    // }
     const postDataHandler = (e) => {
-        
-        axios.post('https://internship-slick-api.herokuapp.com/api/products',productData)
-        .then(res => {
-            console.log(res);
-        });
-        props.toggle();
-        
+        axios.post('https://internship-slick-api.herokuapp.com/api/products', productData)
+            .then(res => {
+                props.setAllProducts([...props.allProducts, res.data.data]);
+                console.log(res);
+                props.toggle();
+            });
     }
     return (
         <div className="Modal">

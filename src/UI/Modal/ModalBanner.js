@@ -12,11 +12,8 @@ const ModalBanner = (props) => {
 
         axios.post('https://internship-slick-api.herokuapp.com/api/banners', bannerData)
             .then(res => {
-                axios.get('https://internship-slick-api.herokuapp.com/api/banners').then(({ data }) => {
-                    console.log(data.data)
-                    props.setAllBanners(data.data);
-
-                });
+                props.setAllBanners([...props.allBanners, res.data.data]);
+                console.log(res);
                 props.toggle();
             })
 

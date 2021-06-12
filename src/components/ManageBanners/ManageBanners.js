@@ -7,6 +7,7 @@ import DeleteIcon from '../../assets/deleteIcon.png';
 import EditIcon from '../../assets/editIcon.png';
 import axios from 'axios'
 
+
 const ManageBanners = (props) => {
   const { id } = useParams();
   
@@ -27,7 +28,7 @@ const ManageBanners = (props) => {
       axios.get('https://internship-slick-api.herokuapp.com/api/banners').then(({ data }) => {
         console.log(data.data)
         props.setAllBanners(data.data);})
-        console.log(res);   
+       
         alert('Banner deleted.');
     });
 
